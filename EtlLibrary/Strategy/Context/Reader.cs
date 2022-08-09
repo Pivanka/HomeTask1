@@ -1,12 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace EtlLibrary.Strategy.Context
 {
-    internal class Reader
+    public class Reader
     {
+        IReader reader;
+        public Dictionary<string, int> Run(string pathExtract, string pathLoad)
+        {
+            Dictionary<string, int> info = new Dictionary<string, int>();
+            if (pathExtract.Contains(".csv"))
+            {
+                reader = new CsvReader();
+                info = reader.Run(pathExtract, pathLoad);
+            }
+            else if (pathExtract.Contains(".txt"))
+            {
+                reader = new TxtReader();
+                info = reader.Run(pathExtract, pathLoad);
+            }
+            return info;
+        }
     }
 }

@@ -1,9 +1,12 @@
+
+
 namespace HomeTask1
 {
     public class PaymentTransactions : BackgroundService
     {
         private readonly ILogger<PaymentTransactions> _logger;
-
+        private string today;
+        
         public PaymentTransactions(ILogger<PaymentTransactions> logger)
         {
             _logger = logger;
@@ -11,6 +14,7 @@ namespace HomeTask1
 
         public override Task StartAsync(CancellationToken cancellationToken)
         {
+            today = DateOnly.FromDateTime(DateTime.Now).ToShortDateString();
             return base.StartAsync(cancellationToken);
         }
 
@@ -18,12 +22,19 @@ namespace HomeTask1
         {
             return base.StopAsync(cancellationToken);
         }
-
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
             while (!stoppingToken.IsCancellationRequested)
             {
-                _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
+                do 
+                {
+                    Facade.FileProcess();
+                } while (Facade.HasNewFiles());
+                if (today != DateOnly.FromDateTime(DateTime.Now).ToShortDateString())
+                {
+                    Facade.CreateLogFile(today);
+                    today = DateOnly.FromDateTime(DateTime.Now).ToShortDateString();
+                }
                 await Task.Delay(1000, stoppingToken);
             }
         }
