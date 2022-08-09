@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTask1", "HomeTask1\HomeTask1.csproj", "{DD6EE229-D042-40E9-948B-9F70DC4AF9FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EtlLibrary", "EtlLibrary\EtlLibrary.csproj", "{D92BD099-558F-46D1-9F3D-1DCA8F6D6163}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DD6EE229-D042-40E9-948B-9F70DC4AF9FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD6EE229-D042-40E9-948B-9F70DC4AF9FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD6EE229-D042-40E9-948B-9F70DC4AF9FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D92BD099-558F-46D1-9F3D-1DCA8F6D6163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D92BD099-558F-46D1-9F3D-1DCA8F6D6163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D92BD099-558F-46D1-9F3D-1DCA8F6D6163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D92BD099-558F-46D1-9F3D-1DCA8F6D6163}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,12 @@
+D:\Internship\HomeTask1\EtlLibrary\bin\Release\net6.0\EtlLibrary.deps.json
+D:\Internship\HomeTask1\EtlLibrary\bin\Release\net6.0\EtlLibrary.dll
+D:\Internship\HomeTask1\EtlLibrary\bin\Release\net6.0\EtlLibrary.pdb
+D:\Internship\HomeTask1\EtlLibrary\obj\Release\net6.0\EtlLibrary.csproj.AssemblyReference.cache
+D:\Internship\HomeTask1\EtlLibrary\obj\Release\net6.0\EtlLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Internship\HomeTask1\EtlLibrary\obj\Release\net6.0\EtlLibrary.AssemblyInfoInputs.cache
+D:\Internship\HomeTask1\EtlLibrary\obj\Release\net6.0\EtlLibrary.AssemblyInfo.cs
+D:\Internship\HomeTask1\EtlLibrary\obj\Release\net6.0\EtlLibrary.csproj.CoreCompileInputs.cache
+D:\Internship\HomeTask1\EtlLibrary\obj\Release\net6.0\EtlLibrary.dll
+D:\Internship\HomeTask1\EtlLibrary\obj\Release\net6.0\refint\EtlLibrary.dll
+D:\Internship\HomeTask1\EtlLibrary\obj\Release\net6.0\EtlLibrary.pdb
+D:\Internship\HomeTask1\EtlLibrary\obj\Release\net6.0\ref\EtlLibrary.dll
