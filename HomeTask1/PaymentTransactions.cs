@@ -14,12 +14,13 @@ namespace HomeTask1
 
         public override Task StartAsync(CancellationToken cancellationToken)
         {
-            today = DateOnly.FromDateTime(DateTime.Now).ToShortDateString();
+            today = DateOnly.FromDateTime(DateTime.Now).ToString("MM/dd/yyyy");
             return base.StartAsync(cancellationToken);
         }
 
         public override Task StopAsync(CancellationToken cancellationToken)
         {
+            _logger.LogInformation("The service has been stopped.");
             return base.StopAsync(cancellationToken);
         }
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -28,14 +29,16 @@ namespace HomeTask1
             {
                 do 
                 {
-                    Facade.FileProcess();
-                } while (Facade.HasNewFiles());
-                if (today != DateOnly.FromDateTime(DateTime.Now).ToShortDateString())
+                    Client.FileProcess();
+                    _logger.LogInformation("All files are processed.");
+                } while (Client.HasNewFiles());
+                if (today != DateOnly.FromDateTime(DateTime.Now).ToString("MM/dd/yyyy"))
                 {
-                    Facade.CreateLogFile(today);
-                    today = DateOnly.FromDateTime(DateTime.Now).ToShortDateString();
+                    Client.CreateLogFile(today);
+                    today = DateOnly.FromDateTime(DateTime.Now).ToString("MM/dd/yyyy");
+                    _logger.LogInformation("Meta.log is created.");
                 }
-                await Task.Delay(1000, stoppingToken);
+                await Task.Delay(15000, stoppingToken);
             }
         }
     }

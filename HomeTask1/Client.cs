@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HomeTask1
 {
-    public class Facade
+    public class Client
     {
         private static List<string> allFiles = new List<string>();
         private readonly static string extractPath = System.Configuration.ConfigurationManager.AppSettings["ExtractPath"];
@@ -49,12 +49,12 @@ namespace HomeTask1
                 // Determine whether the directory exists.
                 if (Directory.Exists(path))
                 {
-                    Console.WriteLine("That path exists already.");
+                    //Console.WriteLine("That path exists already.");
                     return;
                 }
                 // Try to create the directory.
                 DirectoryInfo di = Directory.CreateDirectory(path);
-                Console.WriteLine("The directory was created successfully at {0}.", Directory.GetCreationTime(path));
+                //Console.WriteLine("The directory was created successfully at {0}.", Directory.GetCreationTime(path));
             }
             catch (Exception e)
             {
