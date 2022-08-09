@@ -38,7 +38,7 @@ namespace HomeTask1
                     today = DateOnly.FromDateTime(DateTime.Now).ToString("MM/dd/yyyy");
                     _logger.LogInformation("Meta.log is created.");
                 }
-                await Task.Delay(15000, stoppingToken);
+                await Task.Delay(10000, stoppingToken);
             }
         }
     }

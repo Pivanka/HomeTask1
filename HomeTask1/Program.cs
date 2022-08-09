@@ -12,12 +12,13 @@ try
 {
     Log.Information("Starting up the service.");
     IHost host = Host.CreateDefaultBuilder(args)
-    .ConfigureServices(services =>
-    {
-        services.AddHostedService<PaymentTransactions>();
-    })
-    .UseSerilog()
-    .Build();
+        .UseWindowsService()
+        .ConfigureServices(services =>
+        {
+            services.AddHostedService<PaymentTransactions>();
+        })
+        .UseSerilog()
+        .Build();
     await host.RunAsync();
     return;
 }
